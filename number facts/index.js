@@ -1,6 +1,8 @@
 let favoriteNumber = 2;
 const baseURL = "http://numbersapi.com";
 
+// Task 1
+
 let numberfact = axios.get(`${baseURL}/${favoriteNumber}/math`).then((res) => {
   return res.data;
 });
@@ -18,6 +20,8 @@ function appendPar() {
 }
 
 appendPar();
+
+//  Task 2
 
 let multipleNumbers = [1, 2, 3, 4, 5];
 
@@ -39,6 +43,7 @@ Promise.all(multipleNumbersfactPromises)
     console.log(`Error is ${error}`);
   });
 
+// Task 3
 let fourFactsAboutFavNum = Array(4)
   .fill(favoriteNumber)
   .map((num) => axios.get(`${baseURL}/${num}/trivia`));
